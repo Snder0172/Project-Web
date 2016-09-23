@@ -11,40 +11,38 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header>
-        <h1>Transavia</h1>
+        <a href="index.html"><img class="logo" src="img/logo_transavia.png" alt="Logo Transavia"></a>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="registreer.html" class="inlog"><img src="img/user.png" height="25" alt="inlog"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/heart.png" height="25" alt="Leeslijst"></a>
+                </li>
             </ul>
         </nav>
-
-        <form>
-            <fieldset>
-                <legend>Inloggen</legend>
-
-                <input type="email" placeholder="Emailadres" required>
-                <input type="text" placeholder="Wachtwoord" required>
-
-                <button>Log in</button>
-                <p>Heeft u nog geen account?</p> <a href="registreer.html">Registreer</a>
-            </fieldset>
-        </form>
     </header>
 
     <main>
         <form>
+
+            <a href="index.html" class="close">X</a>
+
             <fieldset>
-                <legend>Maak eenvoudig een Transavia Acount aan.</legend>
+                <legend>
+                    <h2>Maak eenvoudig een Transavia account aan.</h2></legend>
 
                 <label for="voornaam">Voornaam</label>
-                <input type="text" id="voornaam" placeholder="Mark" required>
+                <input type="text" id="voornaam" placeholder="b.v. Mark" required>
 
                 <label for="tussenvoegsels">Tussenvoegsels</label>
-                <input type="text" id="tussenvoegsels" placeholder="Tussenvoegsels">
+                <input type="text" id="tussenvoegsels" placeholder="b.v. S.J.M.">
 
                 <label for="achternaam">Achternaam</label>
-                <input type="text" id="achternaam" placeholder="Jansen" required>
+                <input type="text" id="achternaam" placeholder="b.v. Jansen" required>
 
                 <label for="emailadres">Emailadres</label>
                 <input type="email" id="emailadres" placeholder="voorbeeld@voorbeeld.nl" required>
@@ -53,13 +51,13 @@
                 <input type="password" id="wachtwoord" required>
 
                 <label for="straat">Straatnaam</label>
-                <input type="text" id="straat" placeholder="Witte de Witstraat" required>
+                <input type="text" id="straat" placeholder="b.v. Witte de Witstraat" required>
 
                 <label for="huisnummer">Huisnummer</label>
-                <input type="number" id="huisnummer" placeholder="1" required>
+                <input type="number" id="huisnummer" placeholder="b.v. 1" required>
 
                 <label for="postcode">Postcode</label>
-                <input type="text" id="postcode" placeholder="1234 AB" required>
+                <input type="text" id="postcode" placeholder="b.v. 1234 AB" required>
 
                 <input type="submit">
             </fieldset>

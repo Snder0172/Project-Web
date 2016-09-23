@@ -140,31 +140,33 @@ select {
 ========================================================
 */
 
+@font-face {
+    font-family: NexaBold;
+    src: url(../fonts/Nexa Bold.otf);
+}
+
+@font-face {
+    font-family: NexaLight;
+    src: url(../fonts/Nexa Light.otf);
+}
+
 body {
     font-family: sans-serif;
+    background: #F3E5D8;
 }
 
 h1 {
-    font-family: 'Crimson Text', serif;
-    font-weight: 700;
-    line-height: 46px;
+    font-family: 'NexaBold', serif;
+    color: #474747;
     font-size: 2.275em;
-    margin: 0 0 23px 0;
 }
 
 h2 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'NexaBold', serif;
+    color: #474747;
     font-weight: 700;
-    line-height: 46px;
-    font-size: 2em;
-}
-
-h3 {
-    font-family: 'Crimson Text', serif;
-    font-weight: 700;
-    line-height: 46px;
-    font-size: 1em;
-    margin-bottom: 1em;
+    font-size: 1.3em;
+    line-height: 1.7em;
 }
 
 p {
@@ -172,116 +174,618 @@ p {
     font-size: 1em;
     font-weight: normal;
     line-height: 1.8em;
-    margin: 0 0 23px 0;
+    margin: 0 0 1.437em 0;
 }
 
-
-/*
-========================================================
-    HEADER
-========================================================
-*/
-
-header {
-    width: 80vw;
-    margin: 0 auto;
-    padding-top: 20px;
+hr {
+    color: #D7D7D7;
+    background-color: #D7D7D7;
+    height: 1px;
+    border: none;
+    width: 100%;
 }
 
-header h1{
-    float: left;
-    font-family: sans-serif;
-    font-size: 1em;
-    line-height: 0;
-    margin: 0;
+main article a {
+    padding: 0.5em 1em;
+    border: .125em solid #2800A0;
+    color: #2800A0;
+    border-radius: 2em;
+    font-family: "NexaBold", sans-serif;
 }
 
-header form {
-    float: right;
-}
-
-
-/*
-========================================================
-    ASIDE
-========================================================
-*/
-
-aside {
-    width: 80vw;
-    margin: 0 auto;
-}
-
-
-/*
-========================================================
-    MAIN
-========================================================
-*/
-
-main {
-    width: 80vw;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-main article{
-    border-radius: 20px;
-    border: 1px solid black;
-    width: 200px;
+main form {
+    background: #fff;
+    border-radius: 0.250rem;
+    max-width: 27.5em;
+    margin: 0 0 5vh 0;
     box-sizing: border-box;
-    padding: 0px 20px 20px 20px;
+    padding: 2em;
+    -webkit-box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+    font-family: "NexaBold", sans-serif;
 }
 
-main article header{
+main form fieldset legend h2 {
+    padding: 0 0 1em 0;
+    color: #FF3167;
+}
+
+main form fieldset input[type=text],
+input[type=email],
+input[type=password],
+select {
     width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-main article footer{
-    width: 100%;
-    text-align: left;
+main form fieldset input[type=number],
+#postcode {
+    width: 10em;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-/*
-========================================================
-    ARTICLE
-========================================================
-*/
-
-article {
-    width: 80vw;
-    margin: 0 auto;
-    margin: 0 auto;
-    
-    -webkit-columns: 2 300px;
-    -moz-columns: 2 300px;
-    columns: 2 300px;
-    -webkit-column-gap: 5em;
-    -moz-column-gap: 5em;
-    column-gap: 5em;
-}
-
-article p:first-of-type{
-    font-size: 1.250em;
-}
-
-article > h1,
-h2,
-h3,
-a {
-    column-span: all;
-}
-
-
-/*
-========================================================
-    FOOTER
-========================================================
-*/
-
-footer {
-    width: 80vw;
-    margin: 0 auto;
+main form fieldset input[type=submit] {
     text-align: center;
+    margin: 1em 0 0 0;
+    padding: 1em 0;
+    width: 100%;
+    border-radius: 10em;
+    font-family: "NexaBold", sans-serif;
+    font-size: 1em;
+    border: none;
+    color: #fff;
+    background-color: #FF3167;
+    -webkit-box-shadow: 0 .3em 0 0 rgba(204, 39, 82, 1);
+    -moz-box-shadow: 0 .3em 0 0 rgba(204, 39, 82, 1);
+    box-shadow: 0 .3em 0 0 rgba(204, 39, 82, 1);
+}
+
+.close {
+    position: relative;
+    float: right;
+    color: inherit;
+}
+
+footer img {
+    max-width: 240px;
+}
+
+
+/*
+==================================================================================
+    SMARTPHONE SCREENS
+==================================================================================
+*/
+
+@media only screen and (min-width: 100px) and (max-width: 750px) {
+    /*
+    ========================================================
+        GENERAL
+    ========================================================
+    */
+    body > p {
+        text-align: center;
+    }
+    body > a {
+        display: block;
+        width: 50vw;
+        text-align: center;
+        margin: 1.875em auto;
+        padding: 1em 0;
+        border-radius: 4em;
+        background: rgba(0, 214, 107, 1);
+        color: #fff;
+    }
+    body > a:hover {
+        background: rgba(0, 214, 107, 0.75);
+    }
+    body > span {
+        margin: 0 auto;
+        font-family: "NexaBold", sans-serif;
+        color: #474747;
+        text-align: center;
+    }
+    /*
+    ========================================================
+        HEADER + NAV
+    ========================================================
+    */
+    body > header {
+        background: #FFF;
+        padding: .15em 0 .5em 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        transition: 0.2s;
+        transition-timing-function: ease-in-out;
+        -webkit-box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+    }
+    header a > img {
+        max-height: 1.875em;
+        width: auto;
+        margin: 1.6vh 0 0 2vh;
+    }
+    nav {
+        margin: .2em 2vw 0 auto;
+    }
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul li {
+        margin: 0 0 0 1em;
+    }
+    .scroll {
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .scroll::-webkit-scrollbar {
+        display: none;
+    }
+    .scroll fieldset {
+        padding: 1em 1.5em;
+    }
+    .scroll fieldset label span {
+        margin: 0 .5em;
+        text-align: center;
+        padding: 0.5em 1em 0.3em;
+        border-radius: 1em;
+        font-family: "NexaLight", sans-serif;
+    }
+    .scroll fieldset label input {
+        display: none;
+    }
+    .scroll input:checked + span {
+        color: #fff;
+        background-color: #FF3167;
+        -webkit-box-shadow: 0 .125em 0 0 rgba(204, 39, 82, 1);
+        -moz-box-shadow: 0 .125em 0 0 rgba(204, 39, 82, 1);
+        box-shadow: 0 .125em 0 0 rgba(204, 39, 82, 1);
+    }
+    /*
+    ========================================================
+        MAIN
+    ========================================================
+    */
+    main {
+        width: 80vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2em 0;
+    }
+    main article {
+        background: #fff;
+        border-radius: 0.250rem;
+        max-width: 27.5em;
+        margin: 0 0 5vh 0;
+        box-sizing: border-box;
+        padding: 2em;
+        -webkit-box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 .125em .937em 0 rgba(0, 0, 0, 0.15);
+    }
+    main article:nth-child(1) {
+        border-left: .25em solid #00D66C;
+    }
+    main article:nth-child(1) a {
+        border: .125em solid #00D66C;
+        color: #00D66C;
+    }
+    main article header h2 span:nth-child(1) {
+        color: #00D66C;
+    }
+    main article:nth-child(2) {
+        border-left: .25em solid #FF3167;
+    }
+    main article:nth-child(2) a {
+        border: .125em solid #FF3167;
+        color: #FF3167;
+    }
+    main article header h2 span:nth-child(2) {
+        color: #FF3167;
+    }
+    main article header {
+        width: 100%;
+        border-bottom: 1px solid #D7D7D7;
+        padding: 0 0 1em 0;
+    }
+    main article footer {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main article footer span {
+        width: 50%;
+        box-sizing: border-box;
+        padding-top: 1em;
+    }
+    main article footer span:last-child {
+        border-left: 1px solid #D7D7D7;
+        padding-left: 1em;
+    }
+    /*
+    ========================================================
+        FOOTER
+    ========================================================
+    */
+    footer {
+        background: #fff;
+        padding: 5em 0;
+        text-align: center;
+    }
+    footer > img {
+        width: 60vw;
+    }
+}
+
+
+/*
+==================================================================================
+    TABLET SCREENS
+==================================================================================
+*/
+
+@media only screen and (min-width: 750px) and (max-width: 1200px) {
+    /*
+    ========================================================
+        GENERAL
+    ========================================================
+    */
+    body > p {
+        text-align: center;
+    }
+    body > a {
+        display: block;
+        width: 50vw;
+        text-align: center;
+        margin: 1.875em auto;
+        padding: 1em 0;
+        border-radius: 4em;
+        background: rgba(0, 214, 107, 1);
+        color: #fff;
+    }
+    body > a:hover {
+        background: rgba(0, 214, 107, 0.75);
+    }
+    /*
+    ========================================================
+        HEADER + NAV
+    ========================================================
+    */
+    body > header {
+        background: #FFF;
+        padding: .75em 0 .5em 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        transition: 0.2s;
+        transition-timing-function: ease-in-out;
+        -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+    header a > img {
+        max-height: 50px;
+        width: auto;
+        margin: 1.6vw 0 0 2vw;
+        transition-timing-function: ease-in-out;
+        transition: 0.2s;
+    }
+    nav {
+        margin: 2.5vw 2vw 0 auto;
+        height: 2em;
+    }
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul li {
+        margin: 0 0 0 1em;
+    }
+    .scroll {
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .scroll::-webkit-scrollbar {
+        display: none;
+    }
+    .scroll fieldset {
+        padding: 1em 0;
+    }
+    .scroll fieldset label span {
+        margin: 0 .5em;
+        text-align: center;
+        padding: 0.3em 1em;
+        border-radius: 1em;
+        font-family: sans-serif;
+    }
+    .scroll fieldset label input {
+        position: absolute;
+        top: -20px;
+    }
+    .scroll input:checked + span {
+        color: #fff;
+        background-color: #FF3167;
+        -webkit-box-shadow: 0 2px 0 0 rgba(204, 39, 82, 1);
+        -moz-box-shadow: 0 2px 0 0 rgba(204, 39, 82, 1);
+        box-shadow: 0 2px 0 0 rgba(204, 39, 82, 1);
+    }
+    /*
+    ========================================================
+        MAIN
+    ========================================================
+    */
+    main {
+        width: 90vw;
+        margin: 0 auto;
+        padding: 2em 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    main > article {
+        background: #fff;
+        border-radius: 0.250rem;
+        min-width: 320px;
+        max-width: 45%;
+        margin: 0 0 5vh 0;
+        box-sizing: border-box;
+        padding: 2em;
+        -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+    main article:nth-child(1) {
+        border-left: 4px solid #00D66C;
+    }
+    main article header h2 span:nth-child(1) {
+        color: #00D66C;
+    }
+    main article:nth-child(1) a {
+        border: .125em solid #00D66C;
+        color: #00D66C;
+    }
+    main article:nth-child(2) {
+        border-left: 4px solid #FF3167
+    }
+    main article header h2 span:nth-child(2) {
+        color: #FF3167;
+    }
+    main article:nth-child(2) a {
+        border: .125em solid #FF3167;
+        color: #FF3167;
+    }
+    main article header {
+        width: 100%;
+        border-bottom: 1px solid #D7D7D7;
+        padding: 0 0 1em 0;
+    }
+    main article footer {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main article footer span {
+        width: 50%;
+        box-sizing: border-box;
+        padding-top: 1em;
+    }
+    main article footer span:last-child {
+        border-left: 1px solid #D7D7D7;
+        padding-left: 1em;
+    }
+    /*
+    ========================================================
+        FOOTER
+    ========================================================
+    */
+    footer {
+        background: #fff;
+        padding: 5em 0;
+        text-align: center;
+    }
+    footer > img {
+        width: 240px;
+    }
+}
+
+
+/*
+==================================================================================
+    DESKTOP SCREENS
+==================================================================================
+*/
+
+@media only screen and (min-width: 1200px) {
+    /*
+    ========================================================
+        GENERAL
+    ========================================================
+    */
+    body > p {
+        text-align: center;
+    }
+    body > a {
+        display: block;
+        width: 50vw;
+        text-align: center;
+        margin: 1.875em auto;
+        padding: 1em 0;
+        border-radius: 4em;
+        background: rgba(0, 214, 107, 1);
+        color: #fff;
+    }
+    body > a:hover {
+        background: rgba(0, 214, 107, 0.75);
+    }
+    /*
+    ========================================================
+        HEADER + NAV
+    ========================================================
+    */
+    body > header {
+        background: #FFF;
+        padding: .75em 0 .5em 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        transition: 0.2s;
+        transition-timing-function: ease-in-out;
+        -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+    header a > img {
+        max-height: 30px;
+        width: auto;
+        margin: 1.6vh 0 0 2vh;
+    }
+    nav {
+        margin: 1.6vh 2vh 0 auto;
+        height: 2em;
+    }
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav ul li {
+        margin: 0 0 0 1em;
+    }
+    .scroll {
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .scroll::-webkit-scrollbar {
+        display: none;
+    }
+    .scroll fieldset {
+        padding: 1em 0;
+    }
+    .scroll fieldset label span {
+        margin: 0 .5em;
+        text-align: center;
+        padding: 0.3em 1em;
+        border-radius: 1em;
+        font-family: sans-serif;
+    }
+    .scroll fieldset label input {
+        position: absolute;
+        top: -20px;
+    }
+    .scroll input:checked + span {
+        color: #fff;
+        background-color: #FF3167;
+        -webkit-box-shadow: 0 2px 0 0 rgba(204, 39, 82, 1);
+        -moz-box-shadow: 0 2px 0 0 rgba(204, 39, 82, 1);
+        box-shadow: 0 2px 0 0 rgba(204, 39, 82, 1);
+    }
+    /*
+    ========================================================
+        MAIN
+    ========================================================
+    */
+    main {
+        width: 95vw;
+        padding: 2em 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    main > article {
+        background: #fff;
+        border-radius: 0.250rem;
+        max-width: 320px;
+        margin: 0 0 5vh 0;
+        box-sizing: border-box;
+        padding: 2em;
+        -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+    main article:nth-child(1) {
+        border-left: 4px solid #00D66C;
+    }
+    main article header h2 span:nth-child(1) {
+        color: #00D66C;
+    }
+    main article:nth-child(1) a {
+        border: .125em solid #00D66C;
+        color: #00D66C;
+    }
+    main article:nth-child(2) {
+        border-left: 4px solid #FF3167
+    }
+    main article header h2 span:nth-child(2) {
+        color: #FF3167;
+    }
+    main article:nth-child(2) a {
+        border: .125em solid #FF3167;
+        color: #FF3167;
+    }
+    main article header {
+        width: 100%;
+        border-bottom: 1px solid #D7D7D7;
+        padding: 0 0 1em 0;
+    }
+    main article footer {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main article footer span {
+        width: 50%;
+        box-sizing: border-box;
+        padding-top: 1em;
+    }
+    main article footer span:last-child {
+        border-left: 1px solid #D7D7D7;
+        padding-left: 1em;
+    }
+    main article a {
+        padding: 0.3em 1em;
+    }
+    /*
+    ========================================================
+        FOOTER
+    ========================================================
+    */
+    footer {
+        background: #fff;
+        padding: 5em 0;
+        text-align: center;
+    }
 }
